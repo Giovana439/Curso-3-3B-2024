@@ -9,11 +9,11 @@ const perguntas = [
         enunciado: "Maria, uma adolescente de 16 anos, estudante do ensino médio. Maria estava no banheiro da escola, olhando para o teste de gravidez em suas mãos. O resultado positivo a deixou em choque. Ela nunca imaginou que isso pudesse acontecer com ela. Agora, ela precisava decidir o que fazer a seguir.",
         alternativas: [
             {
-                texto: "Isso é assustador!",
+                texto: "Contar para os pais",
                 afirmacao: "afirmação"
             },
             {
-                texto: "Isso é maravilhoso!",
+                texto: "Contar para o namorado",
                 afirmacao: "afirmação"
             }
         ]
