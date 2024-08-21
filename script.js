@@ -10,11 +10,11 @@ const perguntas = [
         alternativas: [
             {
                 texto: "Contar para os pais",
-                afirmacao: "afirmação"
+                afirmacao: "Vao apoiar em tudo que precisar tanto no financeiro quanto no psicologico"
             },
             {
-                texto: "Contar para o namorado",
-                afirmacao: "afirmação"
+                texto: "Nao contar para os pais",
+                afirmacao: "Não vai ter nenhum tipo de rede de apoio, e vai morar com a sogra"
             }
         ]
     },
