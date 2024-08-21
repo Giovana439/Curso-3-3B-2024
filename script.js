@@ -6,7 +6,7 @@ const textoResultado = document.querySelector(".texto-resultado");
 
 const perguntas = [
     {
-        enunciado: "Assim que saiu da escola você se depara com uma nova tecnologia, um chat que consegue responder todas as dúvidas que uma pessoa pode ter, ele também gera imagens e áudios hiper-realistas. Qual o primeiro pensamento?",
+        enunciado: "Maria, uma adolescente de 16 anos, estudante do ensino médio. Maria estava no banheiro da escola, olhando para o teste de gravidez em suas mãos. O resultado positivo a deixou em choque. Ela nunca imaginou que isso pudesse acontecer com ela. Agora, ela precisava decidir o que fazer a seguir.",
         alternativas: [
             {
                 texto: "Isso é assustador!",
