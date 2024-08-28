@@ -36,7 +36,7 @@ const perguntas = [
         ]
     },
     {
-        enunciado: Seu time está organizando um ataque. Qual é a sua jogada?",
+        enunciado: "Seu time está organizando um ataque. Qual é a sua jogada?",
         alternativas: [
             {
                 texto: "Levanta a bola para o atacante principal.",
