@@ -6,82 +6,87 @@ const textoResultado = document.querySelector(".texto-resultado");
 
 const perguntas = [
     {
-        enunciado: "Maria, uma adolescente de 16 anos, estudante do ensino médio. Maria estava no banheiro da escola, olhando para o teste de gravidez em suas mãos. O resultado positivo a deixou em choque. Ela nunca imaginou que isso pudesse acontecer com ela. Agora, ela precisava decidir o que fazer a seguir.",
+        enunciado: "Você está no saque, qual é a sua estratégia?",
         alternativas: [
             {
-                texto: "Contar para os pais",
-                afirmacao: "Vao apoiar em tudo que precisar tanto no financeiro quanto no psicologico"
+                texto: "Sacar uma bola forte e rápida.",
+                afirmacao: "O saque forte e rápido passou a bola pelo bloqueio e tocou o chão da quadra adversária. Ponto para seu time!",
+                pontos: 1
             },
             {
-                texto: "Nao contar para os pais",
-                afirmacao: "Não vai ter nenhum tipo de rede de apoio, e vai morar com a sogra"
+                texto: "Sacar uma bola curta e lenta.",
+                afirmacao: "O saque curto e lento foi levantado pelo adversário, resultando em um ataque bem-sucedido. Ponto para o adversário.",
+                pontos: 0
             }
         ]
     },
     {
-        enunciado: "Com a descoberta desta tecnologia, chamada Inteligência Artificial, uma professora de tecnologia da escola decidiu fazer uma sequência de aulas sobre esta tecnologia. No fim de uma aula ela pede que você escreva um trabalho sobre o uso de IA em sala de aula. Qual atitude você toma?",
+        enunciado: "O adversário fez um ataque forte. O que você faz?",
         alternativas: [
             {
-                texto: "Utiliza uma ferramenta de busca na internet que utiliza IA para que ela ajude a encontrar informações relevantes para o trabalho e explique numa linguagem que facilite o entendimento.",
-                afirmacao: "afirmação"
+                texto: "Tenta fazer um bloqueio duplo.",
+                afirmacao: "O bloqueio duplo foi eficiente e a bola voltou para a quadra adversária. Ponto para seu time!",
+                pontos: 1
             },
             {
-                texto: "Escreve o trabalho com base nas conversas que teve com colegas, algumas pesquisas na internet e conhecimentos próprios sobre o tema.",
-                afirmacao: "afirmação"
+                texto: "Faz uma defesa baixa e rápida.",
+                afirmacao: "A defesa baixa e rápida foi boa, mas a bola foi para fora. Ponto para o adversário.",
+                pontos: 0
             }
         ]
     },
     {
-        enunciado: "Após a elaboração do trabalho escrito, a professora realizou um debate entre a turma para entender como foi realizada a pesquisa e escrita. Nessa conversa também foi levantado um ponto muito importante: como a IA impacta o trabalho do futuro. Nesse debate, como você se posiciona?",
+        enunciado: Seu time está organizando um ataque. Qual é a sua jogada?",
         alternativas: [
             {
-                texto: "Defende a ideia de que a IA pode criar novas oportunidades de emprego e melhorar habilidades humanas.",
-                afirmacao: "afirmação"
+                texto: "Levanta a bola para o atacante principal.",
+                afirmacao: "O levantamento para o atacante principal resultou em um ataque certeiro. Ponto para seu time!",
+                pontos: 1
             },
             {
-                texto: "Me preocupo com as pessoas que perderão seus empregos para máquinas e defendem a importância de proteger os trabalhadores.",
-                afirmacao: "afirmação"
+                texto: "Faz um toque surpresa para o fundo da quadra adversária.",
+                afirmacao: "O toque surpresa para o fundo da quadra adversária foi interceptado. Ponto para o adversário.",
+                pontos: 0
+            }            
+        ]
+    },
+    {
+        enunciado: "A bola está vindo alta e perto da rede. O que você faz?",
+        alternativas: [
+            {
+                texto: "Tenta um ataque potente.",
+                afirmacao: "O ataque potente resultou em uma bola fora. Ponto para o adversário.",
+                pontos: 0
+            },
+            {
+                texto: "Faz um toque sutil para enganar o bloqueio.",
+                afirmacao: "O toque sutil enganou o bloqueio e a bola caiu na quadra adversária. Ponto para seu time!",
+                pontos: 1
             }
         ]
     },
     {
-        enunciado: "Ao final da discussão, você precisou criar uma imagem no computador que representasse o que pensa sobre IA. E agora?",
+        enunciado: "Você está recebendo o saque do adversário. Como você responde?",
         alternativas: [
             {
-                texto: "Criar uma imagem utilizando uma plataforma de design como o Paint.",
-                afirmacao: "afirmação"
+                texto: "Recebe a bola com um passe alto para organizar a jogada.",
+                afirmacao: "O passe alto organizou a jogada e resultou em um bom ataque. Ponto para seu time!",
+                pontos: 1
             },
             {
-                texto: "Criar uma imagem utilizando um gerador de imagem de IA.",
-                afirmacao: "afirmação"
+                texto: "Recebe a bola com uma manchete baixa e rápida.",
+                afirmacao: "A manchete baixa e rápida resultou em um erro e a bola não passou. Ponto para o adversário.",
+                pontos: 0
             }
         ]
-    },
-    {
-        enunciado: "Você tem um trabalho em grupo de biologia para entregar na semana seguinte, o andamento do trabalho está um pouco atrasado e uma pessoa do seu grupo decidiu fazer com ajuda da IA. O problema é que o trabalho está totalmente igual ao do chat. O que você faz? ",
-        alternativas: [
-            {
-                texto: "Escrever comandos para o chat é uma forma de contribuir com o trabalho, por isso não é um problema utilizar o texto inteiro.",
-                afirmacao: "afirmação"
-            },
-            {
-                texto: "O chat pode ser uma tecnologia muito avançada, mas é preciso manter a atenção pois toda máquina erra, por isso revisar o trabalho e contribuir com as perspectivas pessoais é essencial.",
-                afirmacao: "afirmação"
-            }
-        ]
-    },
+    }
 ];
 
-
-let atual = 0;
+const atual = 0;
 let perguntaAtual;
 let historiaFinal = "";
 
-function mostraPergunta() {
-    if (atual >= perguntas.length) {
-        mostraResultado();
-        return;
-    }
+function mostraPergunta(){
     perguntaAtual = perguntas[atual];
     caixaPerguntas.textContent = perguntaAtual.enunciado;
     caixaAlternativas.textContent = "";
@@ -89,25 +94,19 @@ function mostraPergunta() {
 }
 
 function mostraAlternativas(){
-    for(const alternativa of perguntaAtual.alternativas) {
+    for(const alternativa of perguntaAtual.alternativas){
         const botaoAlternativas = document.createElement("button");
-        botaoAlternativas.textContent = alternativa.texto;
+        botaoAlternativas.textContent = alternativas.texto;
         botaoAlternativas.addEventListener("click", () => respostaSelecionada(alternativa));
-        caixaAlternativas.appendChild(botaoAlternativas);
+        caixaAlternativas.appendChild(botaoAlternativas)
     }
 }
 
-function respostaSelecionada(opcaoSelecionada) {
-    const afirmacoes = opcaoSelecionada.afirmacao;
-    historiaFinal += afirmacoes + " ";
+function respostaSelecionada(opcaoSelecionada){
+    const afirmacao = opcaoSelecionada.afirmacao;
+    historiaFinal = afirmacao;
     atual++;
     mostraPergunta();
-}
-
-function mostraResultado() {
-    caixaPerguntas.textContent = "Em 2049...";
-    textoResultado.textContent = historiaFinal;
-    caixaAlternativas.textContent = "";
 }
 
 mostraPergunta();
