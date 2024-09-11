@@ -6,16 +6,16 @@ const textoResultado = document.querySelector(".texto-resultado");
 
 const perguntas = [
     {
-        enunciado: "Você está no saque, qual é a sua estratégia?",
+        enunciado: "maria está grávida, o que ele deve fazer?",
         alternativas: [
             {
-                texto: "Sacar uma bola forte e rápida.",
-                afirmacao: "O saque forte e rápido passou a bola pelo bloqueio e tocou o chão da quadra adversária. Ponto para seu time!",
+                texto: "Contar para seus familiares.",
+                afirmacao: "Eles aceitaram, e farao de tudo para seu bem e do bebe",
                 pontos: 1
             },
             {
-                texto: "Sacar uma bola curta e lenta.",
-                afirmacao: "O saque curto e lento foi levantado pelo adversário, resultando em um ataque bem-sucedido. Ponto para o adversário.",
+                texto: "Mentir e esconder a gravidez e fugir.",
+                afirmacao: "Risco para sua propria vida e para o feto.",
                 pontos: 0
             }
         ]
