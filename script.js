@@ -6,11 +6,11 @@ const textoResultado = document.querySelector(".texto-resultado");
 
 const perguntas = [
     {
-        enunciado: "maria está grávida, o que ele deve fazer?",
+        enunciado: "Maria está grávida, o que ela deve fazer?",
         alternativas: [
             {
                 texto: "Contar para seus familiares.",
-                afirmacao: "Eles aceitaram, e farao de tudo para seu bem e do bebe",
+                afirmacao: "Eles aceitaram, e fazera de tudo para seu bem e do bebe",
                 pontos: 1
             },
             {
